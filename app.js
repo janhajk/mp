@@ -106,31 +106,6 @@ app.get('/start', ensureAuthenticated, function(req, res) {
     });
 });
 
+app.listen(app.get('port'));
 
-
-// Connects app to mongo database
-db.connect(function() {
-    app.listen(app.get('port'));
-    db.movie.fixDb(); // Until this bug gets fixed...
-    /*
-     * cronjobs
-     *
-     */
-    // Start first cronrun after 6 seconds
-    setTimeout((function() {
-        movie.updateFeeds(function(e) {
-            utils.log(e)
-        });
-        movie.cleanUp(config.keepTime, function(){
-        });
-    })(), 6000);
-    setInterval((function() {
-        movie.updateFeeds(function(e) {
-            utils.log(e)
-        });
-        movie.cleanUp(config.keepTime, function(){
-        });
-    })(), config.updateIntervalFeeds);
-    setInterval(movie.cronUpdateInfo, config.updateIntervalInfos);
-});
 

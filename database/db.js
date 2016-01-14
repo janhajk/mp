@@ -8,5 +8,5 @@ var connection = mysql.createConnection({
   database : config.db.database
 });
 
-exports mysql = mysql;
-exports connection = connection;
+exports.mysql = mysql;
+exports.connection = connection;

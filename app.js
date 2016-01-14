@@ -45,7 +45,6 @@ app.use(passport.session());
 app.use(express.static((path.join(__dirname, 'public'))));
 
 
-app.listen(config.port);
 
 // Authentication
 passport.serializeUser(function(user, done) {
@@ -106,8 +105,7 @@ app.get('/start', ensureAuthenticated, function(req, res) {
     });
 });
 
-app.listen(app.get('port'), function(){
+
+app.listen(config.port, function(){
    console.log('App listening on port ' + app.get('port'));
 });
-
-

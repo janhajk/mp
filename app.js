@@ -107,5 +107,5 @@ app.get('/start', ensureAuthenticated, function(req, res) {
 
 
 app.listen(config.port, function(){
-   console.log('App listening on port ' + config.port));
+   console.log('App listening on port ' + config.port);
 });

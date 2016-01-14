@@ -63,7 +63,7 @@ passport.use(new GoogleStrategy({
 }, function(accessToken, refreshToken, profile, done) {
    console.log(profile);
    process.nextTick(function(err) {
-      if (profile.id === config.googleUser) {
+      if (profile.id === config.google.user) {
          //utils.log('Login in user "' + profile.displayName + '"');
          return done(null, profile);
       }

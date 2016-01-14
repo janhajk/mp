@@ -61,7 +61,7 @@ passport.use(new GoogleStrategy({
    clientSecret: config.google.GOOGLE_CLIENT_SECRET,
    callbackURL: config.baseurl + "/auth/google/callback"
 }, function(accessToken, refreshToken, profile, done) {
-   //utils.log(profile);
+   console.log(profile);
    process.nextTick(function(err) {
       if (profile.id === config.googleUser) {
          //utils.log('Login in user "' + profile.displayName + '"');

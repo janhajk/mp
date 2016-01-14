@@ -34,7 +34,12 @@ app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 app.use(cookieParser());
-app.use(session({secret: config.cookiesecret}));
+app.use(session({
+   secret: config.cookiesecret,
+   proxy: true,
+   resave: true,
+   saveUninitialized: true
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static((path.join(__dirname, 'public'))));

@@ -62,7 +62,7 @@ passport.use(new GoogleStrategy({
    callbackURL: config.baseurl + "/auth/google/callback"
 }, function(accessToken, refreshToken, profile, done) {
    //utils.log(profile);
-   process.nextTick(function() {
+   process.nextTick(function(err) {
       if (profile.id === config.googleUser) {
          //utils.log('Login in user "' + profile.displayName + '"');
          return done(null, profile);

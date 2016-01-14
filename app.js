@@ -59,14 +59,14 @@ passport.use(new GoogleStrategy({
    clientSecret: config.google.GOOGLE_CLIENT_SECRET,
    callbackURL: config.baseurl + "/auth/google/callback"
 }, function(accessToken, refreshToken, profile, done) {
-   utils.log(profile);
+   //utils.log(profile);
    process.nextTick(function() {
       if (profile.id === config.googleUser) {
-         utils.log('Login in user "' + profile.displayName + '"');
+         //utils.log('Login in user "' + profile.displayName + '"');
          return done(null, profile);
       }
       else {
-         utils.log('User not authorised!');
+         //utils.log('User not authorised!');
          return done(err);
       }
    });

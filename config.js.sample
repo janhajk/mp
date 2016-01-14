@@ -1,7 +1,7 @@
 exports.baseurl = 'http://example.com';
 exports.port = 0;
 
-var db;
+var db = {};
 db.host     = "localhost";
 db.user     = "";
 db.password = "";

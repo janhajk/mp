@@ -1,36 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>MP</title>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>MP</title>
 
-        <link rel="shortcut icon"    href="/images/favicon_57x57.png" type="image/x-icon" />
-        <link rel="icon"             href="/images/favicon_57x57.png" />
-        <link rel="apple-touch-icon" href="images/favicon_57x57.png" />
-        <!--<link rel="apple-touch-icon" href="/images/favicon__72x72.png" sizes="72x72" />-->
-        <!--<link rel="apple-touch-icon" href="/images/favicon__114x114.png" sizes="114x114" />-->
+      <link rel="shortcut icon"    href="/images/favicon_57x57.png" type="image/x-icon" />
+      <link rel="icon"             href="/images/favicon_57x57.png" />
+      <link rel="apple-touch-icon" href="images/favicon_57x57.png" />
+      <!--<link rel="apple-touch-icon" href="/images/favicon__72x72.png" sizes="72x72" />-->
+      <!--<link rel="apple-touch-icon" href="/images/favicon__114x114.png" sizes="114x114" />-->
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <!--<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>-->
-        <script src="js/functions.js"></script>
-        <script src="js/mp.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <!--<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>-->
+      <script src="js/functions.js"></script>
+      <script src="js/mp.js"></script>
 
-        <!--<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />-->
-        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+      <!--<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />-->
+      <link rel="stylesheet" type="text/css" href="css/styles.css" />
 
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+      <!-- Bootstrap -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-    </head>
-    <body>
-        <div id="header">
-        </div>
-        <div class="container-fluid">
-           here comes the content
-        </div>
-        <div id="footer"></div>
-    </body>
+   </head>
+   <body>
+      <div id="header">
+      </div>
+      <div class="container-fluid">
+         <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#addnewmovie">add new movie</a></li>
+            <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
+            <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
+         </ul>
+         <div id="home" class="tab-pane fade in active">
+            <form role="form">
+               <div class="form-group">
+                  <label for="title">Title:</label>
+                  <input type="text" class="form-control" id="Title">
+               </div>
+               <div class="form-group">
+                  <label for="imdbid">IMDB-ID:</label>
+                  <input type="text" class="form-control" id="imdbid">
+               </div>
+               <div class="form-group">
+                  <label for="boxofficemojoid">Box Office Mojo ID:</label>
+                  <input type="text" class="form-control" id="boxofficemojoid">
+               </div>
+               <div class="form-group">
+                  <label for="runtime">Runtime [minutes]:</label>
+                  <input type="text" class="form-control" id="runtime">
+               </div>
+               <div class="form-group">
+                  <label for="date_opening">Date opening:</label>
+                  <input type="date" class="form-control" id="date_opening">
+               </div>
+               <div class="form-group">
+                  <label for="date_opening_us">Date opening US:</label>
+                  <input type="date" class="form-control" id="date_opening_us">
+               </div>
+               <div class="form-group">
+                  <label for="date_opening_china">Date opening China:</label>
+                  <input type="date" class="form-control" id="date_opening_china">
+               </div>
+               <div class="form-group">
+                  <label for="date_release_disc">Date release disc:</label>
+                  <input type="date" class="form-control" id="date_release_disc">
+               </div>
+               <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+         </div>
+      </div>
+      <div id="footer"></div>
+   </body>
 </html>

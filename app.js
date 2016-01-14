@@ -107,3 +107,8 @@ app.get('/start', ensureAuthenticated, function(req, res) {
         res.send(data);
     });
 });
+
+app.post('/movie/add', ensureAuthenticated, function(req, res) {
+   utils.log('adding new movie: ' + req.body.title);
+   
+});

@@ -21,7 +21,7 @@ var path     = require('path');
 var fs       = require('fs');
 
 // User
-var utils    = require(__dirname + '/lib/utils.js');
+//var utils    = require(__dirname + '/lib/utils.js');
 
 var db       = require(__dirname + '/database/db.js');
 

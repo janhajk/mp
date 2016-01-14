@@ -1,5 +1,5 @@
 var mysql  = require('mysql');
-var config = require(__dirname + '/config.js');
+var config = require(__dirname + '/../config.js');
 
 var connection = mysql.createConnection({
   host     : config.db.host,

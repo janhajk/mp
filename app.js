@@ -55,8 +55,8 @@ passport.deserializeUser(function(obj, done) {
    done(null, obj);
 });
 passport.use(new GoogleStrategy({
-   clientID: config.GOOGLE_CLIENT_ID,
-   clientSecret: config.GOOGLE_CLIENT_SECRET,
+   clientID: config.google.GOOGLE_CLIENT_ID,
+   clientSecret: config.google.GOOGLE_CLIENT_SECRET,
    callbackURL: config.baseurl + "/auth/google/callback"
 }, function(accessToken, refreshToken, profile, done) {
    utils.log(profile);

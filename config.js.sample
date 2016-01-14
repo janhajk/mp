@@ -1,10 +1,36 @@
-/**
-* Created with mp.
-* User: janhajk
-* Date: 2016-01-13
-* Time: 12:37 PM
-* To change this template use Tools | Templates.
-*/
-define(function() {
-return {};
-});
+exports.baseurl = 'http://example.com';
+exports.port = 0;
+
+var db;
+db.host     = "localhost";
+db.user     = "";
+db.password = "";
+db.database = ""
+exports.db = db;
+
+exports.login    = {};      // don't change
+
+exports.theMovieDbApiKey = '';
+exports.tmdbMaxQueriesPerSecond = 8;
+
+exports.cookiesecret = '';
+
+var google = {};
+google.analyticsid = "";
+
+
+google.GOOGLE_CLIENT_ID = "--insert-google-client-id-here--";
+google.GOOGLE_CLIENT_SECRET = "--insert-google-client-secret-here--";
+
+exports.google = google;
+
+
+exports.updateIntervalFeeds = 1000*60*20;
+exports.updateIntervalInfos = 10000;
+
+exports.urlRegex = new RegExp("^(http[s]?:\\/\\/(www\\.)?|ftp:\\/\\/(www\\.)?|www\\.){1}([0-9A-Za-z-\\.@:%_\+~#=]+)+((\\.[a-zA-Z]{2,3})+)(/(.)*)?(\\?(.)*)?");
+exports.emailRegex = new RegExp("^[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*@[a-z0-9]+([_|\.|-]{1}[a-z0-9]+)*[\.]{1}[a-z]{2,6}$");
+
+exports.cacheTime = 60 * 60 * 1000; // 1 hour in milliseconds
+
+exports.dev = false;

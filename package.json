@@ -1,10 +1,19 @@
-/**
-* Created with mp.
-* User: janhajk
-* Date: 2016-01-13
-* Time: 12:38 PM
-* To change this template use Tools | Templates.
-*/
-define(function() {
-return {};
-});
+{
+   "name": "mp",
+   "version": "0.0.1",
+   "dependencies": {
+      "express": "^4.10.6",
+      "mysql": "^2.5.4"
+      "compression": "1.x",
+      "method-override": "2.x",
+      "body-parser": "1.x",
+      "http-auth": "2.x",
+      "request": "2.x",
+      "passport": "0.3.x",
+      "passport-google-oauth": "0.2.x",
+      "moviedb": "0.2.x",
+      "async": "1.x",
+      "cookie-parser": "1.4.x",
+      "express-session": "1.11.x"
+   }
+}

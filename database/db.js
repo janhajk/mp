@@ -1,6 +1,6 @@
 var mysql  = require('mysql');
 var config = require(__dirname + '/../config.js');
-var movie = require(__dirname + '/movie.js');
+
 
 var connection = mysql.createConnection({
   host     : config.db.host,
@@ -32,4 +32,4 @@ var insert = function(table, values){
 
 exports.insert = insert;
 
-exports.movie = movie;
+exports.movie = require('./movie.js');

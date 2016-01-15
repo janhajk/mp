@@ -1,5 +1,6 @@
 var mysql  = require('mysql');
 var config = require(__dirname + '/../config.js');
+var movie = require('movie.js');
 
 var connection = mysql.createConnection({
   host     : config.db.host,
@@ -23,7 +24,12 @@ var insert = function(table, values){
    }
    sql.replace('%keys', k.join());
    sql.replace('%values', v.join());
-   connection.connect()
+   connection.connect();
+   utils.log(sql);
+   //connection.query(sql);
+   connection.end();
 };
 
 exports.insert = insert;
+
+exports.movie = movie;

@@ -1,4 +1,4 @@
-var db = require('db.js');
+var db = require(__dirname + '/db.js');
 
 
 var function add(data, callback) {

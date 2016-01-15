@@ -4,10 +4,9 @@ $(document).ready(function() {
    };
    $("#formaddmovie").submit(function(event) {
       event.preventDefault();
-      submitForm();
+      addMovie();
    });
-   var
-      function = addMovie() {
+   var addMovie = function() {
             var data = {
                title: $('#addMovieTitle').val();
                imdbid: $('#addMovieimdbid').val();

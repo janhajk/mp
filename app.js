@@ -117,5 +117,6 @@ app.get('/test', ensureAuthenticated, function(req, res){
 
 app.post('/movie/add', ensureAuthenticated, function(req, res) {
    utils.log('adding new movie: ' + req.body.title);
+   utils.log(req.body);
    db.movie.add(req.body);
 });

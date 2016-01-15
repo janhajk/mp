@@ -17,7 +17,7 @@ $(document).ready(function() {
                date_opening_china: $('#addMoviedate_opening_china').val(),
                date_release_disc: $('#addMoviedate_release_disc').val()
             };
-            $.ajax("/movie/add"{
+            $.ajax("/movie/add", {
                type: "POST",
                data: data,
                dataType: "json",

@@ -8,3 +8,4 @@ var add = function(data, callback) {
    //db.connection.end();
    db.insert('movie', data);
 };
+exports.add = add;

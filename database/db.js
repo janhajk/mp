@@ -23,8 +23,8 @@ var insert = function(table, values){
       k.push(key);
       v.push("'" + values[key]  + "'");
    }
-   sql.replace('%keys', k.join());
-   sql.replace('%values', v.join());
+   sql = sql.replace('%keys', k.join());
+   sql = sql.replace('%values', v.join());
    connection.connect();
    utils.log(sql);
    //connection.query(sql);

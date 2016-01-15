@@ -108,6 +108,13 @@ app.get('/start', ensureAuthenticated, function(req, res) {
     });
 });
 
+app.get('/test', ensureAuthenticated, function(req, res){
+   var mojo = require(__dirname + '/lib/mojo.js');
+   mojo.test(function(output){
+      res.send(output);
+   });
+});
+
 app.post('/movie/add', ensureAuthenticated, function(req, res) {
    utils.log('adding new movie: ' + req.body.title);
    

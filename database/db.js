@@ -1,5 +1,6 @@
 var mysql  = require('mysql');
 var config = require(__dirname + '/../config.js');
+var utils = require(__dirname + '/../lib/utils.js');
 
 
 var connection = mysql.createConnection({

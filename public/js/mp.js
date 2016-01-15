@@ -8,14 +8,14 @@ $(document).ready(function() {
    });
    var addMovie = function() {
             var data = {
-               title: $('#addMovieTitle').val();
-               imdbid: $('#addMovieimdbid').val();
-               boxofficemojoid: $('#addMovieboxofficemojoid').val();
-               runtime: $('#addMovieruntime').val();
-               date_opening: $('#addMoviedate_opening').val();
-               date_opening_us: $('#addMoviedate_opening_us').val();
-               date_opening_china: $('#addMoviedate_opening_china').val();
-               date_release_disc: $('#addMoviedate_release_disc').val();
+               title: $('#addMovieTitle').val(),
+               imdbid: $('#addMovieimdbid').val(),
+               boxofficemojoid: $('#addMovieboxofficemojoid').val(),
+               runtime: $('#addMovieruntime').val(),
+               date_opening: $('#addMoviedate_opening').val(),
+               date_opening_us: $('#addMoviedate_opening_us').val(),
+               date_opening_china: $('#addMoviedate_opening_china').val(),
+               date_release_disc: $('#addMoviedate_release_disc').val()
             };
             $.ajax("/movie/add"{
                type: "POST",

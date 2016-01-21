@@ -21,3 +21,4 @@ var get = function(id, callback) {
    });
    db.connection.end();
 };
+exports.get = get;

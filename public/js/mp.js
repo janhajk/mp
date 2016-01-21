@@ -38,7 +38,8 @@ $(document).ready(function() {
          dataType: 'json',
          success: function(rows){
             callback(rows);
-         }
+         },
+         error: function(jq, err){console.log(err)};
       });
    };
    

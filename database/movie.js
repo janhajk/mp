@@ -13,9 +13,9 @@ exports.add = add;
 
 var get = function(id, callback) {
    db.connection.connect();
-   var id = '';
-   if (id !== 0) id = ' WHERE id = ' + id;
-   var sql = "SELECT * FROM movie" + id;
+   var sqlid = '';
+   if (id !== 0) sqlid = ' WHERE id = ' + id;
+   var sql = "SELECT * FROM movie" + sqlid;
    db.connection.query(sql, function(err, rows, fields) {
       console.log(err);
       console.log(rows);

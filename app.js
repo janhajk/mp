@@ -123,7 +123,7 @@ app.post('/movie/add', ensureAuthenticated, function(req, res) {
 app.get('/movie', ensureAuthenticated, function(req, res) {
    utils.log('requsting list of movies...');
    db.movie.get(0, function(rows){
-      res.send(rows); 
+      res.send(rows);
    });
 });
 

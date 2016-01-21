@@ -120,3 +120,15 @@ app.post('/movie/add', ensureAuthenticated, function(req, res) {
    utils.log(req.body);
    db.movie.add(req.body);
 });
+app.get('/movie', ensureAuthenticated, function(req, res) {
+   utils.log('requsting list of movies...');
+   db.movie.get(0, function((rows){
+      res.send(rows);
+   }));
+});
+
+app.post('/movie/update/history', ensureAuthenticated, function(req, res) {
+   utils.log('Updating history for movie: ' + req.body.title);
+   utils.log(req.body);
+   db.movie.add(req.body);
+});

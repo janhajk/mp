@@ -30,46 +30,52 @@
       </div>
       <div class="container-fluid">
          <ul class="nav nav-tabs">
+            <li><a data-toggle="tab" href="#movies">Movies</a></li>
             <li class="active"><a data-toggle="tab" href="#addnewmovie">add new movie</a></li>
-            <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
             <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
          </ul>
-         <div id="home" class="tab-pane fade in active">
-            <form role="form" id="formaddmovie">
-               <div class="form-group">
-                  <label for="title">Title:</label>
-                  <input type="text" class="form-control" id="addMovieTitle">
-               </div>
-               <div class="form-group">
-                  <label for="imdbid">IMDB-ID:</label>
-                  <input type="text" class="form-control" id="addMovieimdbid">
-               </div>
-               <div class="form-group">
-                  <label for="boxofficemojoid">Box Office Mojo ID:</label>
-                  <input type="text" class="form-control" id="addMovieboxofficemojoid">
-               </div>
-               <div class="form-group">
-                  <label for="runtime">Runtime [minutes]:</label>
-                  <input type="text" class="form-control" id="addMovieruntime">
-               </div>
-               <div class="form-group">
-                  <label for="date_opening">Date opening:</label>
-                  <input type="date" class="form-control" id="addMoviedate_opening">
-               </div>
-               <div class="form-group">
-                  <label for="date_opening_us">Date opening US:</label>
-                  <input type="date" class="form-control" id="addMoviedate_opening_us">
-               </div>
-               <div class="form-group">
-                  <label for="date_opening_china">Date opening China:</label>
-                  <input type="date" class="form-control" id="addMoviedate_opening_china">
-               </div>
-               <div class="form-group">
-                  <label for="date_release_disc">Date release disc:</label>
-                  <input type="date" class="form-control" id="addMoviedate_release_disc">
-               </div>
-               <button type="submit" class="btn btn-default">Submit</button>
-            </form>
+         <div class="tab-content">
+            <div id="movies" class="tab-pane fade in active">
+               
+
+            </div>
+            <div id="addnewmovie" class="tab-pane fade">
+               <form role="form" id="formaddmovie">
+                  <div class="form-group">
+                     <label for="title">Title:</label>
+                     <input type="text" class="form-control" id="addMovieTitle">
+                  </div>
+                  <div class="form-group">
+                     <label for="imdbid">IMDB-ID:</label>
+                     <input type="text" class="form-control" id="addMovieimdbid">
+                  </div>
+                  <div class="form-group">
+                     <label for="boxofficemojoid">Box Office Mojo ID:</label>
+                     <input type="text" class="form-control" id="addMovieboxofficemojoid">
+                  </div>
+                  <div class="form-group">
+                     <label for="runtime">Runtime [minutes]:</label>
+                     <input type="text" class="form-control" id="addMovieruntime">
+                  </div>
+                  <div class="form-group">
+                     <label for="date_opening">Date opening:</label>
+                     <input type="date" class="form-control" id="addMoviedate_opening">
+                  </div>
+                  <div class="form-group">
+                     <label for="date_opening_us">Date opening US:</label>
+                     <input type="date" class="form-control" id="addMoviedate_opening_us">
+                  </div>
+                  <div class="form-group">
+                     <label for="date_opening_china">Date opening China:</label>
+                     <input type="date" class="form-control" id="addMoviedate_opening_china">
+                  </div>
+                  <div class="form-group">
+                     <label for="date_release_disc">Date release disc:</label>
+                     <input type="date" class="form-control" id="addMoviedate_release_disc">
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+               </form>
+            </div>
          </div>
       </div>
       <div id="footer"></div>

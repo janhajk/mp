@@ -9,3 +9,15 @@ var add = function(data, callback) {
    db.insert('movie', data);
 };
 exports.add = add;
+
+
+var get = function(id, callback) {
+   db.connection.connect();
+   var id = '';
+   if (id !== 0) id = ' WHERE id = ' + id;
+   var sql = "SELECT * FROM movie" + id;
+   db.connection.query(sql,, function(err, rows, fields) {
+      callback(rows);
+   });
+   db.connection.end();
+};

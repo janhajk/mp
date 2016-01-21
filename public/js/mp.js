@@ -39,7 +39,7 @@ $(document).ready(function() {
          success: function(rows){
             callback(rows);
          },
-         error: function(jq, err){console.log(err)};
+         error: function(jq, err){console.log(err)}
       });
    };
    

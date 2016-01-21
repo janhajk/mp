@@ -17,6 +17,8 @@ var get = function(id, callback) {
    if (id !== 0) id = ' WHERE id = ' + id;
    var sql = "SELECT * FROM movie" + id;
    db.connection.query(sql, function(err, rows, fields) {
+      console.log(err);
+      console.log(rows);
       callback(rows);
    });
    db.connection.end();

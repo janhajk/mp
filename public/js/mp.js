@@ -62,5 +62,6 @@ $(document).ready(function() {
       for (var i in rows) {
          table.appendChild(movieLine(rows[i]));
       }
+      container.appendChild(table);
    });
 });

@@ -10,6 +10,7 @@ var connection = mysql.createConnection({
   database : config.db.database,
   supportBigNumbers: true
 });
+connection.connect();
 
 exports.mysql = mysql;
 exports.connection = connection;
@@ -25,10 +26,8 @@ var insert = function(table, values){
    }
    sql = sql.replace('%keys', k.join());
    sql = sql.replace('%values', v.join());
-   connection.connect();
    utils.log(sql);
    //connection.query(sql);
-   connection.end();
 };
 
 exports.insert = insert;

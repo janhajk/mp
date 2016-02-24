@@ -128,7 +128,8 @@ app.get('/movie', ensureAuthenticated, function(req, res) {
 });
 
 app.post('/movie/update/history', ensureAuthenticated, function(req, res) {
-   utils.log('Updating history for movie: ' + req.body.title);
-   utils.log(req.body);
-   db.movie.add(req.body);
+   utils.log('Updating history for movie: ' + req.body.id);
+   db.movie.updateHistory(req.body.id, function(){
+      'updated!'
+   });
 });

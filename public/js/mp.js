@@ -49,7 +49,7 @@ $(document).ready(function() {
       var updateHistory = document.createElement('td');
       title.innerHTML = movie.title;
       updateHistory.innerHTML = 'update history';
-      updateHistory.onclick = function(){
+      updateHistory.onclick = function(){  // doesn't work!!
          movieHistoryUpdate(movie.id);
       };
       tr.appendChild(title);
@@ -64,4 +64,14 @@ $(document).ready(function() {
       }
       container.appendChild(table);
    });
+   var movieHistoryUpdate = function(id) {
+      $.ajax('/movie/update/history', {
+         type: 'POST',
+         data: {id:[id]},
+         dataType: 'json',
+         success: function(rows){
+            console.log('History updated for movie with id ' + id);
+         }
+      });
+   };
 });
